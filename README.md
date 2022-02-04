@@ -1,46 +1,61 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+##Sobre o Projeto
 
-In the project directory, you can run:
+O Letmeask é um aplicativo que permite a interação entre um palestrante/apresentador, onde seu público pode interagir com o assunto proposto por meio de perguntas realizado direto a ele.
 
-### `yarn start`
+No letmeask o palestrante/apresentador pode gerenciar as perguntas de acordo com o interesse do publico geral ou andamento da palestra, mensurando isso por meio dos likes aplicados à cada pergunta ou destaque aplicado a pergunta. Além disso, a aplicação possui uma interface que apresenta funcionalidades exclusivas do administrador, controladas pela autenticação do Firebase.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##Funcionalidades
+- A aplicação apresenta as seguintes funcionalidades:
+  - Criar salas para cada assunto.
+  - Criar perguntas sobre o assunto.
+  - Gerenciamento das perguntas pelo administrador.
 
-### `yarn test`
+##Como executar o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###Pré-requisitos
 
-### `yarn build`
+Primeiramente, deve-se instalar as seguintes ferramentas:
+  Git -> (https://git-scm.com)
+  Node.js -> (https://nodejs.org/en/)
+  
+E um IDE de sua preferência, recomento o editor VSCode:
+  VSCode -> (https://code.visualstudio.com/)
+  
+ ## Executando o projeto
+ 
+ Clonando o projeto:
+ 
+ Pela chave SSH:
+ $ git clone <git@github.com:matuane/letMeAsk.git>
+ 
+ Pelo link HTTPS:
+ $ git clone <https://github.com/matuane/letMeAsk.git>
+ 
+ Em seguida aplique o seguinte comando:
+ 
+ $ cd letMeAsk
+ 
+ Após, instale as dependências:
+ $ yarn install
+ 
+ Por fim, inicie a aplicação:
+ 
+$ yarn start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Tecnologias
+O projeto utiliza das seguintes tecnologias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js]->(https://nodejs.org/en/)
+- [React.js]->(https://nodejs.org/en/)
+- [Typescript]->(https://www.typescriptlang.org/)
+- [Material UI]->https://mui.com/pt/
+- [Sass]->(https://sass-lang.com/)
+- [FireBase]->(https://firebase.google.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Autor
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feito por [Mateus Antuane Gonçalves](https://github.com/matuane)
+ 
