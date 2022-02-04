@@ -1,21 +1,21 @@
 
 
-##Sobre o Projeto
+## Sobre o Projeto
 
 O Letmeask é um aplicativo que permite a interação entre um palestrante/apresentador, onde seu público pode interagir com o assunto proposto por meio de perguntas realizado direto a ele.
 
 No letmeask o palestrante/apresentador pode gerenciar as perguntas de acordo com o interesse do publico geral ou andamento da palestra, mensurando isso por meio dos likes aplicados à cada pergunta ou destaque aplicado a pergunta. Além disso, a aplicação possui uma interface que apresenta funcionalidades exclusivas do administrador, controladas pela autenticação do Firebase.
 
 
-##Funcionalidades
+## Funcionalidades
 - A aplicação apresenta as seguintes funcionalidades:
   - Criar salas para cada assunto.
   - Criar perguntas sobre o assunto.
   - Gerenciamento das perguntas pelo administrador.
 
-##Como executar o projeto
+## Como executar o projeto
 
-###Pré-requisitos
+### Pré-requisitos
 
 Primeiramente, deve-se instalar as seguintes ferramentas:
   Git -> (https://git-scm.com)
