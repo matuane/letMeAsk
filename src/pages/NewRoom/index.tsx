@@ -2,15 +2,15 @@ import { FormEvent, useState } from "react";
 
 import { Link, useHistory } from "react-router-dom";
 
-import logoImg from "../assets/images/logo.svg";
-import illustrationImg from "../assets/images/illustration.svg";
+import logoImg from "../../assets/images/logo.svg";
+import illustrationImg from "../../assets/images/illustration.svg";
 
-import { useAuth } from "../Hooks/useAuth";
-import { database } from "../services/firebase";
+import { useAuth } from "../../Hooks/useAuth";
+import { database } from "../../services/firebase";
 
-import { Button } from "../components/Button";
+import { Button } from "../../components/Button";
 
-import "../styles/auth.scss";
+import "./style.scss";
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -35,6 +35,10 @@ export function NewRoom() {
     history.push(`/rooms/${firebaseRoom.key}`);
   }
 
+  const handleSendHome = () => {
+    history.push('/');
+  };
+
   return (
     <div id="page-auth">
       <aside>
@@ -47,7 +51,7 @@ export function NewRoom() {
       </aside>
       <main>
         <div className="main-content">
-          <img src={logoImg} alt="Letmeask" />
+          <img src={logoImg} alt="Letmeask" onClick={handleSendHome}/>
           <h2>Criar uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input

@@ -1,16 +1,20 @@
 import { FormEvent, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
-import logoImg from "../assets/images/logo.svg";
+import logoImg from "../../assets/images/logo.svg";
 
-import { useAuth } from "../Hooks/useAuth";
-import { useRoom } from "../Hooks/useRoom";
-import { Button } from "../components/Button";
-import { database } from "../services/firebase";
-import { Question } from "../components/Question";
-import { RoomCode } from "../components/RoomCode";
+import Avatar from "@mui/material/Avatar";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
-import "../styles/room.scss";
+import { useAuth } from "../../Hooks/useAuth";
+import { useRoom } from "../../Hooks/useRoom";
+import { Button } from "../../components/Button";
+import { database } from "../../services/firebase";
+import { Question } from "../../components/Question";
+import { RoomCode } from "../../components/RoomCode";
+
+import "./style.scss";
 
 type RoomParams = {
   id: string;
@@ -18,6 +22,9 @@ type RoomParams = {
 
 export function Room() {
   const { user } = useAuth();
+
+  const history = useHistory();
+
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState("");
 
@@ -66,11 +73,15 @@ export function Room() {
     }
   }
 
+  const handleSendHome = () => {
+    history.push('/');
+  };
+
   return (
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <img src={logoImg} alt="Letmeask" onClick={handleSendHome}/>
           <RoomCode code={roomId!} />
         </div>
       </header>
@@ -82,22 +93,28 @@ export function Room() {
         </div>
 
         <form onSubmit={handleSendQuestion}>
-          <textarea
+          <TextField
             placeholder="O que você quer perguntar?"
+            multiline
+            variant="standard"
             onChange={(event) => setNewQuestion(event.target.value)}
+            className="questionTextField"
             value={newQuestion}
+            InputProps={{
+              disableUnderline: true,
+            }}
           />
 
           <div className="form-footer">
             {user ? (
               <div className="user-info">
-                <img src={user.avatar} alt={user.name} />
-                <span>{user.name}</span>
+                <Avatar src={user.avatar} alt={user.name} />
+                <Typography className="userName">{user.name}</Typography>
               </div>
             ) : (
-              <span>
+              <Typography className="sendQuestionLogin">
                 Para enviar uma pergunta, <button>faça seu login</button>.
-              </span>
+              </Typography>
             )}
             <Button type="submit" disabled={!user}>
               Enviar pergunta
@@ -122,7 +139,9 @@ export function Room() {
                     aria-label="Marcar como gostei"
                     onClick={() => handleLikeQuestion(value.id, value.likeId)}
                   >
-                    <span>{value.likeCount > 0 && value.likeCount}</span>
+                    <Typography>
+                      {value.likeCount > 0 && value.likeCount}
+                    </Typography>
                     <svg
                       width="24"
                       height="24"

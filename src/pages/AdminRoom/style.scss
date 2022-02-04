@@ -13,11 +13,11 @@
         > img {
           max-height: 45px;
         }
-
+  
         > div {
           display: flex;
           gap: 16px;
-
+  
           button {
             height: 40px;
           }
@@ -35,7 +35,7 @@
         align-items: center;
   
         h1 {
-          font-family: 'Poppins', sans-serif;
+          font-family: "Poppins", sans-serif;
           font-size: 24px;
           color: #29292e;
         }
@@ -45,7 +45,7 @@
           background: #e559f9;
           border-radius: 9999px;
           padding: 8px 16px;
-          color: #FFF;
+          color: #fff;
           font-weight: 500;
           font-size: 14px;
         }
@@ -95,7 +95,7 @@
             button {
               background: transparent;
               border: 0;
-              color: #835AFD;
+              color: #835afd;
               text-decoration: underline;
               font-size: 14px;
               font-weight: 500;
@@ -104,9 +104,85 @@
           }
         }
       }
-
+  
       .question-list {
         margin-top: 32px;
+      }
+    }
+  }
+  .deleteModal {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+    > div {
+      padding: 1rem;
+    }
+  
+    .deleteIcon {
+      width: 70px;
+      height: 70px;
+      color: #e73f5d;
+    }
+  
+    .titleModalDelete {
+      font-size: 28px;
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
+    }
+  
+    .questionModal {
+      font-size: 20px;
+      color: #737380;
+      line-height: 26px;
+      text-align: center;
+      padding-bottom: 1rem;
+      font-family: "Roboto", sans-serif;
+    }
+  
+    .buttons {
+      display: flex;
+      grid-gap: 1rem;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+  
+      .cancelButton {
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        color: #737380;
+        line-height: 19px;
+        border-radius: 8px;
+        font-style: normal;
+        padding: 1rem 2rem;
+        background-color: #dbdcdd;
+        font-family: "Roboto", sans-serif;
+  
+        &:hover {
+          filter: brightness(0.95);
+        }
+      }
+  
+      .confirmButton {
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #fefefe;
+        font-weight: 500;
+        line-height: 19px;
+        font-style: normal;
+        border-radius: 8px;
+        padding: 1rem 2rem;
+        background: #e73f5d;
+        font-family: "Roboto", sans-serif;
+  
+        &:hover {
+          filter: brightness(0.95);
+        }
       }
     }
   }
