@@ -45,6 +45,17 @@ E um IDE de sua preferência, recomento o editor VSCode:
  
 $ yarn start
 
+## Observações
+O projeto ainda está em desenvolvimento. Dessa forma para acessar a página de admin, deve-se adicionar "/admin" antes da url da sala selecionada, como no exemplo abaixo:
+ - URL usuário comum:
+  (http://localhost:3000/rooms/-Mv5_762N46TQHIWMlqU)
+  ![image](https://user-images.githubusercontent.com/65567865/152603910-903ad896-eeaf-4707-99fd-8d4049a6cfc1.png)
+  
+- URL administrador:
+  (http://localhost:3000/admin/rooms/-Mv5_762N46TQHIWMlqU)
+  ![image](https://user-images.githubusercontent.com/65567865/152603997-7131219c-73ab-4da6-9e5e-fcc1f7c5db7e.png)
+
+
 ## 🛠 Tecnologias
 O projeto utiliza das seguintes tecnologias:
 
